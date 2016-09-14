@@ -7,7 +7,7 @@ var work = {
 			"title": "Front-End Web Developer",
 			"location": "Green park, New Delhi",
 			"dates": "June 2016",
-			"description": "All things front-end related."
+			"description": "Creation of checkout Forms, mobile website development, bugs removal and all frontend related things."
 		},
 		{
 			"employer": "USICT , GGSIPU",
