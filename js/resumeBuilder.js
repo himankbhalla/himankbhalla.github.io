@@ -14,7 +14,7 @@ var work = {
 			"title": "Front-End Web Developer",
 			"location": "Dwarka, New Delhi",
 			"dates": "March ,2015",
-			"description": "Revamped the previous Indraprastha University Website to new one , with an emphasis on making it mobile friendly (responsive) and new design. Used html5 , css3 , javascript , jquery and bootsrap for designing the frontend and making it mobile-friendly."
+			"description": "Revamped the previous Indraprastha University Website to the current. With an emphasis on making it mobile friendly (responsive) and new design. Used html5 , css3 , javascript , jquery and bootsrap for designing the frontend and making it mobile-friendly."
 		}
 
 	]
@@ -135,7 +135,7 @@ var bio = {
 	"first name": "Himank",
 	"last name": "Bhalla",
 	"role": "Full stack Web Developer",
-	"welcome message": "I'm passionate about web design and web development, and learn about the same.I prefer Django on python for backend  and for frontend -Anything that suits the requirement of  project, I love making data driven web apps.Feel free to check out my Github repositories and demo projects.",
+	"welcome message": "I'm passionate about web design and web development, and learn about the same.I prefer Django with python for backend  and for frontend -Anything that suits the requirement of  project, I love making data driven web apps.Feel free to check out my Github repositories and demo projects.",
 	"bio pic": "https://lh3.googleusercontent.com/-SBN15tcmbC8/UkCdJGCGHOI/AAAAAAAAAVE/Gjs_4zrqmfY/w140-h140-p/LeiZ.JPG",
 	"contacts": 
 		{
@@ -174,7 +174,7 @@ var education = {
 			"name": "USICT GGSIPU",
 			"location": "Dwarka, New Delhi ",
 			"majors": ["Btech-IT"],
-			"dates": "August 2013",
+			"dates": "August 2017",
 			"url": "http://ipu.ac.in"
 		},
 		{
@@ -197,9 +197,9 @@ var hobbies={
             "act5":"playing cricket , table tennis , volley ball, PC games.",
             "act6":"Exploring new Apps.",
             "act7":"Exploring food joints , trying different cuisines.",
-            "act8":"Watching movies  and tv series.",
+            "act8":"Watching movies and tv series.",
             "act9":"Web surfing",
-            "act10":"Learn new things.",
+            "act10":"Learn new technologies",
 };
 hobbies.display = function(){
     
@@ -329,7 +329,7 @@ var polarData = [
     value: 5,
     color: "#4D5360",
     highlight: "#616774",
-    label: "Sass",
+    label: "Less",
     labelcolor: "black"
   },
     {
