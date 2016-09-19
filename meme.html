@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>My MemeMaker</title>
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <style>
+    #image-container {
+      display: flex;
+    }
+  </style>
+</head>
+
+<body>
+ <div class="jumbotron">
+  <h1>A simple Meme Maker!</h1>
+  <p>select your photo , write the topline and  bottom line Select text color and click save!!</p>
+</div>
+<div  class='container'>
+  <div  class='row'>
+      <div  class='col-md-6'>
+    <input type="file" id="file" />  
+    <canvas width="320" height="480"></canvas>
+    </div>
+     <div  class="col-md-4  col-md-offset-2">
+      <form>
+  <div class="form-group">
+    <label for="topLineText">Top Line:</label>
+    <input type="text" class="form-control" id="topLineText" placeholder="Enter text here">
+  </div>    
+      
+      <div class="form-group">
+    <label for="bottomLineText">Bottom Line</label>
+    <input type="text" class="form-control" id="bottomLineText" placeholder="Enter text here">
+  </div>
+          <div class='form-group'>
+    <input type="radio" name="color" value="black" id='black' checked>black<br>
+  <input type="radio" name="color" value="white" id='white'>white<br>
+      </div>
+     <button class="btn btn-default" type="submit" id='saveBtn'>Save</button>
+      </form>
+      </div>
+      
+  </div>
+    </div>
+    <nav class="navbar navbar-default navbar-fixed-bottom">
+  <div class="container">
+    
+  </div>
+</nav>
+    
+  <script>
+    function textChangeListener (evt) {
+      var id = evt.target.id;
+      var text = evt.target.value;
+      
+      if (id == "topLineText") {
+        window.topLineText = text;
+      } else {
+        window.bottomLineText = text;
+      }
+      
+      redrawMeme(window.imageSrc, window.topLineText, window.bottomLineText);
+    }
+    
+    function redrawMeme(image, topLine, bottomLine) {
+      // Get Canvas2DContext
+      var canvas = document.querySelector('canvas');
+      var ctx = canvas.getContext("2d");
+      // Your code here
+    //    ctx.fillStyle('blue');
+        ctx.font="30px Georgia";
+        ctx.strokeStyle= "#fff";
+        console.log(file);
+        ctx.drawImage(image , 0 ,0,320, 480);
+       var black= document.getElementById("black");
+        if(black.checked){
+        ctx.fillStyle= "#333";
+        }else{
+            ctx.fillStyle='#fff';
+        }
+        
+        ctx.fillText(topLine , 40 ,30);
+        ctx.fillText(bottomLine ,  40 , 400);
+    }
+    
+    function saveFile() {
+      window.open(document.querySelector('canvas').toDataURL());
+    }
+    
+    function handleFileSelect(evt) {
+      var canvasWidth = 320;
+      var canvasHeight = 480;
+      var file = evt.target.files[0];
+      
+      console.log(file);
+      
+      var reader = new FileReader();
+      reader.onload = function(fileObject) {
+        var data = fileObject.target.result;
+        
+        // Create an image object
+        var image = new Image();
+        image.onload = function() {
+          console.log(this);
+          window.imageSrc = this;
+          redrawMeme(window.imageSrc, null, null);
+        }
+        
+        // Set image data to background image.
+        image.src = data;
+        console.log(fileObject.target.result);
+      };
+      reader.readAsDataURL(file)
+    }
+    
+    window.topLineText = "";
+    window.bottomLineText = "";
+    var input1 = document.getElementById('topLineText');
+    var input2 = document.getElementById('bottomLineText');
+    input1.oninput = textChangeListener;
+    input2.oninput = textChangeListener;
+    document.getElementById('file').addEventListener('change', handleFileSelect, false);
+    document.querySelector('button').addEventListener('click', saveFile, false);
+  </script>
+
+</body>
+</html>
