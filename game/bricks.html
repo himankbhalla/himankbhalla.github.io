@@ -1,0 +1,309 @@
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">    
+<style>
+#mycanvas{
+
+position:absolute;
+left:0;
+top:0;
+}
+#back{
+position:absolute;
+left:0;
+top:0;
+}
+#gameover{
+position:absolute;
+left:0;
+top:0;
+}
+</style>
+</head>
+<body>
+    <div class='container'>
+        <div class="row">
+            <h1>Aim: save your brick from  other bricks  to collide.use arrow keys to move left and right.Press enter to start  the game.</h1>
+<div class='col-md-4 col-md-offset-2'>            
+<canvas id="back" height="500px" width="800px"></canvas>
+<canvas id="mycanvas" height="500px" width="800px"></canvas>
+<canvas id="gameover" height="500px" width="800px"></canvas>
+    </div>
+        </div>
+    </div>
+<audio id="soundEfx" src="kalimba.mp3" style="display: none;"></audio>
+</body>
+</html>
+<script>
+/*
+var canvas=document.getElementById('mycanvas');
+ctx.beginpath();
+ctx.arc(75,75,50,0,Math.PI*2,true);
+ctx.stroke();
+ctx.moveTo(0,0);
+ctx.lineTo(50,50);
+ctx.lineTo(70,50);
+ctx.lineTo(100,150);
+ctx.stroke();
+
+var img= new Image();
+img.src="apple.jpg";
+img.onload=function(){
+ctx.drawImage(img,150,150);
+
+}
+*/
+(function (){
+var soundfx;
+var back=document.getElementById('back');
+var ctx_back=back.getContext("2d");
+var canvas=document.getElementById('mycanvas');
+var ctx=canvas.getContext("2d");
+var over=document.getElementById('gameover');
+var ctx_over=over.getContext("2d");
+var bgloaded=false;
+
+var game=new Image();
+game.src="yellow.png";
+var init;
+var vx = 0;
+var array1=[];
+var array2=[];
+var array3=[];
+soundEfx = document.getElementById("soundEfx");
+soundEfx.play();		
+var background=new Image();
+background.src="star.jpg"
+background.onload=function(){
+bgloaded=true;
+
+ctx_back.drawImage(background, 0, 0);
+ctx.fillStyle=("#FBFE30");
+
+matrix();
+
+ctx.fillRect(400,400,30,30);
+ctx.save();
+}
+function matrix(){
+array1.splice(0,array1.length);
+array2.splice(0,array2.length);
+array3.splice(0,array3.length);
+ctx.fillStyle=("#FBFE30");
+for(i=0;i<10;i++){
+var a=Math.random()*1000;
+array1.push(a);
+var b=Math.random()*1000;
+array2.push(b);
+var c=Math.random()*1000;
+array3.push(c);
+ctx.fillRect(a,200,20,20);
+ctx.fillRect(b,100,20,20);
+ctx.fillRect(c,50,20,20);
+first_box=200, sec_box=100, third_box=50;
+}
+
+init=true;
+
+}
+
+player={
+x:400,
+speed:10,
+acceleration:0.001
+}
+bots={
+x:0,
+y:0
+
+}
+
+
+addEventListener("keydown",function(a){
+update(a);
+},false)
+
+addEventListener("keyup",function(a){
+decellerate(a);
+},false)
+function decellerate(a){
+if(a.keyCode=='37')
+{ player.acceleration=0;
+  player.speed=10;
+ 
+}
+if(a.keyCode=='39')
+{  player.acceleration=0;
+  player.speed=10;
+
+}
+
+
+}
+
+function update(a){
+
+if(a.keyCode=='37')
+{ player.acceleration+=.3;
+  player.speed=player.speed+player.acceleration;
+ player.x=player.x-player.speed;
+}
+if(a.keyCode=='39')
+{  player.acceleration+=.3;
+  player.speed=player.speed+player.acceleration;
+ player.x=player.x+player.speed;
+}
+
+if(exit==true)
+return;
+if(player.x>770){
+player.x=770;
+}
+if(player.x<0){
+player.x=0;
+}
+render(player.x);
+}
+var score=0;
+function panning(x){
+
+ctx_back.drawImage(background, 0, vx);
+ctx_back.drawImage(background,50, background.width-Math.abs(vx));
+ 
+if (Math.abs(vx) > background.width) {
+    vx = 0;
+}
+ 
+vx -= 2;	
+
+}
+setInterval(panning,100);
+var block_speed=.2,first_box=200, sec_box=100, third_box=50,exit=false;
+
+function panning2(){
+if(exit==true){
+clearInterval(panning2);
+return;
+}
+
+if((init==true)&&(third_box<500)){
+ctx.clearRect(0,0,800,500);
+ctx.font = "30px serif";
+var score_text = "SCORE: " + score;
+  ctx.fillText(score_text,20,40);
+  
+for(var i=0;i<10;i++){
+
+ctx.fillRect(array1[i],first_box+block_speed,20,20);
+ctx.fillRect(array2[i],sec_box+block_speed,20,20);
+ctx.fillRect(array3[i],third_box+block_speed,20,20);
+first_box=first_box+block_speed;
+sec_box=sec_box+block_speed;
+third_box=third_box+block_speed;
+
+}
+
+for(var j=0;j<10;j++){
+if((array1[j]+20>player.x)&&(array1[j]<player.x+30)&&(first_box+block_speed>=400)&&(first_box+block_speed<=430))
+{
+
+exit=true;
+init=false;
+ 
+ctx_over.drawImage(game,0,0);
+ctx.fillStyle=("#EC5C4D");
+ctx_over.font = "90px serif";
+  ctx_over.fillText("GAME OVER",150,200);
+  ctx_over.fillText(score_text,150,350);
+ soundEfx.pause();
+  return;
+}
+if((array2[j]+20>player.x)&&(array2[j]<player.x+30)&&(sec_box+block_speed>=400)&&(sec_box+block_speed<=430))
+{
+exit=true;
+init=false;
+ 
+ctx_over.drawImage(game,0,0);
+ctx.fillStyle=("#EC5C4D");
+ctx_over.font = "90px serif";
+  ctx_over.fillText("GAME OVER",150,200);
+  ctx_over.fillText(score_text,150,350);
+  clearInterval(panning2);
+soundEfx.pause();
+  return;
+}
+
+if((array3[j]+20>player.x)&&(array3[j]<player.x+30)&&(third_box+block_speed>=400)&&(third_box+block_speed<430))
+{
+exit=true;
+init=false;
+ 
+ctx_over.drawImage(game,0,0);
+ctx.fillStyle=("#EC5C4D");
+ctx_over.font = "90px serif";
+  ctx_over.fillText("GAME OVER",150,200);
+  ctx_over.fillText(score_text,150,350);
+  clearInterval(panning2);
+  soundEfx.pause();
+  return;
+
+
+}
+}
+
+}
+else{
+score=score+10;
+clearInterval(panning2);
+block_speed=block_speed+.1;
+first_box=200, 
+sec_box=100, 
+third_box=50;
+
+init=false;
+
+matrix();
+
+
+}
+
+render(player.x);
+}
+setInterval(panning2,50);
+
+function render(x){
+
+ctx.fillStyle=("#EC5C4D");
+   
+ctx.fillRect(x,400,30,30);	
+	ctx.fillStyle=("#FBFE30");
+
+}
+
+addEventListener("keypress",function(e){
+if (e.keyCode == '13') {
+                e.preventDefault();
+				soundEfx.load();
+				soundEfx.play();
+				window.clearInterval(panning2);
+				ctx_over.clearRect(0,0,800,800);
+				ctx.clearRect(0,0,500,800);
+				exit=false;
+				
+				first_box=200, sec_box=100, third_box=50;
+				block_speed=.2;
+				score=0;
+				
+				matrix();
+				player.x=400;
+				render(player.x);
+				clearInterval(panning2);
+				
+				
+				
+}
+},false);
+})();
+
+</script>
