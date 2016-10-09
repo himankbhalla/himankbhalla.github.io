@@ -38,59 +38,62 @@ var projects = {
 	"projects": [
 		
 		{
-			"title": "ICCTICT 2016 ",
-			"date worked": "Feb, 2016",
-			"description": "Designed the international conference of information  and communication technology website using Ember ",
-			"image": "http://lei-clearsky.github.io/images/1.jpg",
-			"github": "https://github.com/hbhalla123/icctict16.github.io",
-			"demo": "http://ipu.ac.in/usict/icctict/icctict.html",
-			"progress": 100
-		},
-		{
-			"title": "Canvas Game",
-			"date worked": "Nov, 2014",
-			"description": "Classic HTML5 Canvas API game built using javascript.",
-			"image": "http://lei-clearsky.github.io/images/1.jpg",
-			"github": "https://github.com/lei-clearsky/p3-arcade-game",
-			"demo": "http://lei-clearsky.github.io/p3-arcade-game/",
-			"progress": 100
-		},
-		
-		{
 			"title": "MVP Truckit",
-			"date worked": "Jul, 2015 - Aug, 2015",
+			"date worked": "Oct, 2014 - Dec, 2014",
 			"description": "My first django project. created a MVP for a startup uses google's map Api , Enables to order trucks for movement",
-			"image": "http://lei-clearsky.github.io/images/3.jpg",
+			
 			"github": "https://github.com/hbhalla123/truckit",
 			"demo": "http://139.59.3.4:8001/home",
 			"progress": 100
 		},
 		{
-			"title": "Foodchaps",
-			"date worked": "Aug, 2014 - Sept, 2014",
-			"description": "A Social network based on food.Upload your food photos and explore whats worth trying the town and lot more.",
-			"image": "http://lei-clearsky.github.io/images/5.jpg",
-			"github": "https://github.com/hbhalla123/food",
-			"progress": 90,
-              "demo":"http://www.foodchaps.com"
-		},
-		{
-			"title": "Short stories",
-			"date worked": "Oct, 2013 - Dec, 2013",
-			"description": "My first microbloging project. Post your stories short and concised in 200 cahracters!",
-			"image": "http://lei-clearsky.github.io/images/2.jpg",
-			"github": "https://github.com/lei-clearsky/search-recipes-app",
-			"demo": "http://shtory.in",
+			"title": "Canvas Game",
+			"date worked": "Nov, 2015",
+			"description": "Classic HTML5 Canvas API game built using javascript.",
+			
+			"github": "https://github.com/hbhalla123/hbhalla123.github.io/tree/master/game",
+			"demo": "https://hbhalla123.github.io/game/bricks.html",
 			"progress": 100
 		},
 		{
 			"title": "IPU Official Website",
 			"date worked": "July, 2015",
 			"description": "I redesigned and created the front-end of the  Guru Gobind Singh Indraprastha University website. The previous site  was static and in html4 ",
-			"image": "http://lei-clearsky.github.io/images/6.jpg",
+			
 			"demo": "http://ipu.ac.in/",
 			"progress": 100
-		}
+		},
+		
+		{
+			"title": "Short stories",
+			"date worked": "Oct, 2015 - Dec, 2015",
+			"description": "My first microbloging project. Post your stories short and concised in 200 cahracters!",
+			
+			"github": "https://github.com/lei-clearsky/search-recipes-app",
+			"demo": "http://shtory.in",
+			"progress": 100
+		},
+		{
+			"title": "ICCTICT 2016 ",
+			"date worked": "Feb, 2016",
+			"description": "Designed the international conference of information  and communication technology website using Ember ",
+			
+			"github": "https://github.com/hbhalla123/icctict16.github.io",
+			"demo": "http://ipu.ac.in/usict/icctict/icctict.html",
+			"progress": 100
+		},
+		
+		{
+			"title": "Foodchaps",
+			"date worked": "Jan, 2016 - April, 2016",
+			"description": "A Social network based on food.Upload your food photos and explore whats worth trying the town and lot more.",
+			
+			"github": "https://github.com/hbhalla123/food",
+			"progress": 90,
+              "demo":"http://www.foodchaps.com"
+		},
+		
+		
 	]
 
 };
