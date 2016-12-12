@@ -282,7 +282,7 @@ var polarData = [
     value: 9,
     color: "#2ecc71",
     highlight: "#A8B3C5",
-    label: "Boostrap",
+    label: "Bootstrap",
     labelcolor: "parrot-green"
   },
     
