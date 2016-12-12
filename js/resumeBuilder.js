@@ -39,11 +39,19 @@ var projects = {
 		
 		{
 			"title": "MVP Truckit",
-			"date worked": "Oct, 2014 - Dec, 2014",
+			"date worked": "Jan, 2015",
 			"description": "My first django project. created a MVP for a startup uses google's map Api , Enables to order trucks for movement",
 			
 			"github": "https://github.com/hbhalla123/truckit",
 			"demo": "http://139.59.3.4:8001/home",
+			"progress": 100
+		},
+		{
+			"title": "IPU Official Website",
+			"date worked": "March, 2015",
+			"description": "I redesigned and created the front-end of the  Guru Gobind Singh Indraprastha University website. The previous site  was static and in html4 ",
+			
+			"demo": "http://ipu.ac.in/",
 			"progress": 100
 		},
 		{
@@ -55,14 +63,6 @@ var projects = {
 			"demo": "https://hbhalla123.github.io/game/bricks.html",
 			"progress": 100
 		},
-		{
-			"title": "IPU Official Website",
-			"date worked": "July, 2015",
-			"description": "I redesigned and created the front-end of the  Guru Gobind Singh Indraprastha University website. The previous site  was static and in html4 ",
-			
-			"demo": "http://ipu.ac.in/",
-			"progress": 100
-		},
 		
 		{
 			"title": "Short stories",
@@ -70,7 +70,7 @@ var projects = {
 			"description": "My first microbloging project. Post your stories short and concised in 200 cahracters!",
 			
 			"github": "https://github.com/lei-clearsky/search-recipes-app",
-			"demo": "http://shtory.in",
+			"demo": "http://www.shtory.in",
 			"progress": 100
 		},
 		{
@@ -89,7 +89,7 @@ var projects = {
 			"description": "A Social network based on food.Upload your food photos and explore whats worth trying the town and lot more.",
 			
 			"github": "https://github.com/hbhalla123/food",
-			"progress": 90,
+			"progress": 100,
               "demo":"http://www.foodchaps.com"
 		},
 		
@@ -146,7 +146,7 @@ var bio = {
 			"github username": "hbhalla123",
 			"location": "New Delhi"
 		},
-	"skills": ["HTML5", "CSS3", "Javascript", "JQuery", "Ember", "Django", "Python", "Bootsrap","C++","Materialize","Canvas","Git"]
+	"skills": ["HTML5", "CSS3", "Javascript", "JQuery", "Ember", "Django", "Python", "Bootstrap","C++","Materialize","Canvas","Git"]
 
 };
 bio.display = function(){
