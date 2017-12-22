@@ -262,7 +262,7 @@ var polarData = [
   {
     value: 9,
     color:"#F06613",
-    highlight: "#FF5A5E",
+    highlight: "#f06613ba",
     label: "CSS3",
     labelcolor: "orange"
   },
@@ -278,48 +278,48 @@ var polarData = [
     color: "#46BFBD",//"#FDB45C",
     highlight: "#5AD3D1",//"#FFC870",
     label: "Jquery",
-    labelcolor: "yellow"
+    labelcolor: "green"
   },
   {
     value: 9,
     color: "#F06613",
-    highlight: "#FF5A5E",
+    highlight: "#f06613ba",
     label: "Bootstrap",
-    labelcolor: "parrot-green"
+    labelcolor: "orange"
   },
 
      {
     value: 7,
-    color: "#34495e",
-    highlight: "#A8B3C5",
+    color: "#9b59b6",
+    highlight: "#9b59b6ba",
     label: "Django",
     labelcolor: "dark-grey"
   },
      {
     value: 7,
-    color: "#f1c40f",
-    highlight: "#f39c12",
+    color: "#9b59b6",
+    highlight: "#9b59b6ba",
     label: "Python",
     labelcolor: "lemon"
   },
      {
     value: 7,
     color: "#9b59b6",
-    highlight: "#A8B3C5",
+    highlight: "#9b59b6ba",
     label: "C++",
     labelcolor: "purple"
   },
      {
     value: 9,
     color: "#F06613",
-    highlight: "#FF5A5E",
+    highlight: "#f06613ba",
     label: "Materialize",
-    labelcolor: "maroon"
+    labelcolor: "orange"
   },
   {
     value: 7,
-    color: "#3498db",
-    highlight: "#2980b9",
+    color: "#9b59b6",
+    highlight: "#9b59b6ba",
     label: "Git",
     labelcolor: "bluesky"
   },
@@ -332,15 +332,15 @@ var polarData = [
   },
 	{
 	value: 6,
-	color: "#949FB1",
-	highlight: "#A8B3C5",
+	color: "#3498db",
+	highlight: "#3498dbb8",
 	label: "Express",
 	labelcolor: "light-grey"
 	},
 	{
 	value: 6,
-	color: "#949FB1",
-	highlight: "#A8B3C5",
+	color: "#3498db",
+	highlight: "#3498dbb8",
 	label: "Hapijs",
 	labelcolor: "light-grey"
 },
