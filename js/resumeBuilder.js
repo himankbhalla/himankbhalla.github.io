@@ -7,7 +7,7 @@ var work = {
 			"title": "Full Stack Web Developer",
 			"location": "Kohat Enclave, New Delhi",
 			"dates": "Oct 2017 - Current",
-			"description": "Made an assessment application from scratch. Digitalized psychological tests and report generation. Currently used by clients like HCL, Canara HSBC etc."
+			"description": "Contributed to open source projects like OneAuth, an OAuth provider. Hackerblocks an online coding platform and an online video streaming platform (online.codingblocks.com)."
 		},
 		{
 			"employer": "Wayforward",
@@ -150,7 +150,7 @@ var bio = {
 	"last name": "Bhalla",
 	"role": "Full stack Web Developer",
 	"welcome message": "I'm passionate about web design and web development, and learn about the same. I love making data driven scalable web apps.",
-	"bio pic": "https://lh3.googleusercontent.com/-SBN15tcmbC8/UkCdJGCGHOI/AAAAAAAAAVE/Gjs_4zrqmfY/w140-h140-p/LeiZ.JPG",
+	"bio pic": "https://avatars1.githubusercontent.com/u/12507894?s=460&v=4",
 	"contacts":
 		{
 			"email": "hbhalla95@gmail.com",
@@ -171,11 +171,11 @@ bio.display = function(){
 	var formattedBioPic = HTMLbioPic.replace("%data%", bio["bio pic"]);
 	var formattedWelcomeMsg = HTMLWelcomeMsg.replace("%data%", bio["welcome message"]);
 
-
-	$("#header").prepend(formattedRole);
-	$("#header").prepend(formattedLName);
-	$("#header").prepend(formattedFName);
-	$("#header").append(formattedWelcomeMsg);
+  $("#profile-info").append(formattedBioPic);
+	$("#name-info").append(formattedRole);
+	$("#name-info").append(formattedFName);
+	$("#name-info").append(formattedLName);
+	$("#profile-info").append(formattedWelcomeMsg);
 	$("#topContacts ul").append(formattedEmail);
 	$("#topContacts ul").append(formattedGithub);
 	$("#topContacts ul").append(formattedLocation);
@@ -287,29 +287,28 @@ var polarData = [
     label: "Bootstrap",
     labelcolor: "orange"
   },
-
-     {
+	{
     value: 7,
     color: "#9b59b6",
     highlight: "#9b59b6ba",
     label: "Django",
     labelcolor: "purple"
   },
-     {
+  {
     value: 7,
     color: "#9b59b6",
     highlight: "#9b59b6ba",
     label: "Python",
     labelcolor: "purple"
   },
-     {
+  {
     value: 7,
     color: "#9b59b6",
     highlight: "#9b59b6ba",
     label: "C++",
     labelcolor: "purple"
   },
-     {
+  {
     value: 9,
     color: "#F06613",
     highlight: "#f06613ba",
@@ -323,7 +322,7 @@ var polarData = [
     label: "Git",
     labelcolor: "purple"
   },
-    {
+  {
     value: 5,
     color: "#949FB1",
     highlight: "#A8B3C5",
@@ -343,7 +342,7 @@ var polarData = [
 	highlight: "#3498dbb8",
 	label: "Hapijs",
 	labelcolor: "bluesky"
-},
+	},
   ];
 // Display a list of skill labels
 var skillsChartLabels = function(){
