@@ -293,14 +293,14 @@ var polarData = [
     color: "#9b59b6",
     highlight: "#9b59b6ba",
     label: "Django",
-    labelcolor: "dark-grey"
+    labelcolor: "purple"
   },
      {
     value: 7,
     color: "#9b59b6",
     highlight: "#9b59b6ba",
     label: "Python",
-    labelcolor: "lemon"
+    labelcolor: "purple"
   },
      {
     value: 7,
@@ -321,7 +321,7 @@ var polarData = [
     color: "#9b59b6",
     highlight: "#9b59b6ba",
     label: "Git",
-    labelcolor: "bluesky"
+    labelcolor: "purple"
   },
     {
     value: 5,
@@ -335,14 +335,14 @@ var polarData = [
 	color: "#3498db",
 	highlight: "#3498dbb8",
 	label: "Express",
-	labelcolor: "light-grey"
+	labelcolor: "bluesky"
 	},
 	{
 	value: 6,
 	color: "#3498db",
 	highlight: "#3498dbb8",
 	label: "Hapijs",
-	labelcolor: "light-grey"
+	labelcolor: "bluesky"
 },
   ];
 // Display a list of skill labels
