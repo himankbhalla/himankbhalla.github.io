@@ -62,7 +62,7 @@ var projects = {
 		{
 			"title": "IPU Official Website",
 			"date worked": "March, 2015",
-			"description": "I redesigned and created the front-end of the  Guru Gobind Singh Indraprastha University website. The previous site  was static and in html4 ",
+			"description": "I revamped the design of the  Guru Gobind Singh Indraprastha University website and made it mobile compatible.",
 
 			"demo": "http://ipu.ac.in/",
 			"progress": 100
