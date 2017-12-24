@@ -50,21 +50,29 @@ work.display = function(){
 // Projects JSON
 var projects = {
 	"projects": [
-
 		{
-			"title": "MVP Truckit",
-			"date worked": "Jan, 2015",
-			"description": "My first django project. created a MVP for a startup uses google's map Api , Enables to order trucks for movement",
+			"title": "Foodchaps",
+			"date worked": "Jan, 2016 - April, 2016",
+			"description": "A Social network based on food.Upload your food photos and explore whats worth trying the town and lot more.",
 
-			"github": "https://github.com/hbhalla123/truckit",
+			"github": "https://github.com/hbhalla123/food",
+			"progress": 100,
+		},
+		{
+			"title": "ICCTICT 2016 ",
+			"date worked": "Feb, 2016",
+			"description": "Designed the international conference of information  and communication technology website using Ember ",
+
+			"github": "https://github.com/hbhalla123/icctict16.github.io",
+			"demo": "http://ipu.ac.in/usict/icctict/icctict.html",
 			"progress": 100
 		},
 		{
-			"title": "IPU Official Website",
-			"date worked": "March, 2015",
-			"description": "I revamped the design of the  Guru Gobind Singh Indraprastha University website and made it mobile compatible.",
+			"title": "Short stories",
+			"date worked": "Oct, 2015 - Dec, 2015",
+			"description": "My first microbloging project. Post your stories short and concised in 200 cahracters!",
 
-			"demo": "http://ipu.ac.in/",
+			"github": "https://github.com/lei-clearsky/search-recipes-app",
 			"progress": 100
 		},
 		{
@@ -76,33 +84,23 @@ var projects = {
 			"demo": "https://hbhalla123.github.io/game/bricks.html",
 			"progress": 100
 		},
-
+		,
 		{
-			"title": "Short stories",
-			"date worked": "Oct, 2015 - Dec, 2015",
-			"description": "My first microbloging project. Post your stories short and concised in 200 cahracters!",
+			"title": "IPU Official Website",
+			"date worked": "March, 2015",
+			"description": "I revamped the design of the  Guru Gobind Singh Indraprastha University website and made it mobile compatible.",
 
-			"github": "https://github.com/lei-clearsky/search-recipes-app",
+			"demo": "http://ipu.ac.in/",
 			"progress": 100
 		},
 		{
-			"title": "ICCTICT 2016 ",
-			"date worked": "Feb, 2016",
-			"description": "Designed the international conference of information  and communication technology website using Ember ",
+			"title": "MVP Truckit",
+			"date worked": "Jan, 2015",
+			"description": "My first django project. created a MVP for a startup uses google's map Api , Enables to order trucks for movement",
 
-			"github": "https://github.com/hbhalla123/icctict16.github.io",
-			"demo": "http://ipu.ac.in/usict/icctict/icctict.html",
+			"github": "https://github.com/hbhalla123/truckit",
 			"progress": 100
-		},
-
-		{
-			"title": "Foodchaps",
-			"date worked": "Jan, 2016 - April, 2016",
-			"description": "A Social network based on food.Upload your food photos and explore whats worth trying the town and lot more.",
-
-			"github": "https://github.com/hbhalla123/food",
-			"progress": 100,
-		},
+		}
 
 
 	]
