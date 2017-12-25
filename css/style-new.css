@@ -47,6 +47,11 @@ span {
   color: #fff;
   padding: 5px 10px;
 }
+.welcome-message{
+  font-size: 15px;
+  text-align: justify;
+}
+}
 .first-name{
   font-weight:700;
 }

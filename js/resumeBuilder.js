@@ -147,7 +147,7 @@ var bio = {
 	"first name": "Himank",
 	"last name": "Bhalla",
 	"role": "Full stack Web Developer",
-	"welcome message": "I'm passionate about web design and web development, and learn about the same. I love making data driven scalable web apps.",
+	"welcome message": "I'm passionate about web design and web development. I’m curious, and I enjoy work that challenges me to learn something new and stretch in a different direction.  I love making data driven scalable web apps.",
 	"bio pic": "https://avatars1.githubusercontent.com/u/12507894?s=460&v=4",
 	"contacts":
 		{
