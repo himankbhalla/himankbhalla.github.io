@@ -45,6 +45,7 @@ work.display = function(){
 								.append(HTMLworkDates.replace("%data%", work.jobs[job]["dates"]))
 								.append(HTMLworkDescription.replace("%data%", work.jobs[job]["description"]));
 	}
+$('#workExperience').css('display','flex');
 
 }
 // Projects JSON
