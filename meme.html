@@ -71,7 +71,15 @@
       
       redrawMeme(window.imageSrc, window.topLineText, window.bottomLineText);
     }
+    function draw3dText(context, text, x, y, textDepth){
+    var n;
     
+    // draw bottom layers
+    for (n = 0; n < textDepth; n++) {
+        context.fillText(text, x - n, y - n);
+    }
+    
+    }
     function redrawMeme(image, topLine, bottomLine) {
       // Get Canvas2DContext
       var canvas = document.querySelector('canvas');
@@ -88,9 +96,10 @@
         }else{
             ctx.fillStyle='#fff';
         }
-        
-        ctx.fillText(topLine , 40 ,30);
-        ctx.fillText(bottomLine ,  40 , 400);
+        draw3dText(ctx,topLine,40, 30, 5);
+        draw3dText(ctx,bottomLine,40, 30, 5);
+        //ctx.fillText(topLine , 40 ,30);
+        //ctx.fillText(bottomLine ,  40 , 400);
     }
     
     function saveFile() {
