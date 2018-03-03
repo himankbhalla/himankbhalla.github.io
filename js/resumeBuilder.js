@@ -14,7 +14,7 @@ var work = {
 			"title": "Full Stack Web Developer",
 			"location": "GK-1, New Delhi",
 			"dates": "Jan 2017 - Oct 2017",
-			"description": "Made an assessment application from scratch. Digitalized psychological tests and report generation. Currently used by clients like HCL, Canara HSBC etc."
+			"description": "Made an assessment application from scratch. Digitalized psychological tests and report generation automatic. Currently used by clients like HCL, Canara HSBC etc."
 		},
 		{
 			"employer": "Clickgarage.in",
