@@ -7,7 +7,7 @@ var work = {
 			"title": "Full Stack Web Developer",
 			"location": "Kohat Enclave, New Delhi",
 			"dates": "Oct 2017 - Current",
-			"description": "Contributed to open source projects like OneAuth, an OAuth provider. Hackerblocks an online coding platform and an online video streaming platform (online.codingblocks.com). Payments system for the apps"
+			"description": "Contributed to open source projects like OneAuth, an OAuth provider. Hackerblocks an online coding platform and an online video streaming platform (online.codingblocks.com). Payments system for the apps.Razorpay API integeration"
 		},
 		{
 			"employer": "Wayforward",
